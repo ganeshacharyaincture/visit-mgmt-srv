@@ -1,4 +1,5 @@
 import express from 'express';
+import { master } from './routes';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -6,8 +7,8 @@ const PORT = process.env.PORT || 4000;
 // Middleware
 app.use(express.json());
 
-// // Routes
-// app.use('/api/todos', todoRoutes);
+// Sample Route
+app.use('/master', master);
 
 // Health check endpoint
 app.get('/health', (_req, res) => {
