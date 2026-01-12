@@ -1,5 +1,5 @@
 import express from 'express';
-import { master } from './routes';
+import routes from './routes';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 
 // Sample Route
-app.use('/master', master);
+app.routes("/", routes)
 
 // Health check endpoint
 app.get('/health', (_req, res) => {

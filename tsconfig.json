@@ -14,5 +14,8 @@
     "typeRoots": ["./src/types", "./node_modules/@types"]
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "paths": {
+    "@db/*": ["src/db/*/**"]
+  }
 }

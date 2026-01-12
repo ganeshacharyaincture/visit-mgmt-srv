@@ -1,3 +1,4 @@
-import master from "./master";
+import * as master from "./master";
+import * as user from "./user";
 
-export { master };
+export default { master, user };
